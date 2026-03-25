@@ -1,5 +1,11 @@
 .venv
 .vscode
 .mypy_cache
+__pycache__/
 
 tmp
+runs/
+datasets/
+street_photos/
+*.pt
+.roboflow/
