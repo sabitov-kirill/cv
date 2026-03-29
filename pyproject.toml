@@ -5,16 +5,33 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
+    "accelerate>=1.0.0",
+    "clip @ git+https://github.com/openai/CLIP.git",
+    "diffusers @ git+https://github.com/huggingface/diffusers.git",
+    "facenet-pytorch>=2.6.0",
     "h5py>=3.12.0",
     "ipykernel>=7.2.0",
     "ipyprogress>=0.1.0",
     "matplotlib>=3.10.8",
+    "numpy>=1.26.0",
     "opencv-python-headless>=4.10.0",
+    "peft>=0.14.0",
+    "pillow>=11.0.0",
+    "piq>=0.8.0",
     "roboflow>=1.1.0",
     "torch>=2.11.0",
     "torchvision>=0.26.0",
     "tqdm>=4.67.3",
+    "transformers>=4.40.0",
     "ultralytics>=8.3.0",
+]
+
+[tool.uv]
+environments = ["platform_machine == 'x86_64' and sys_platform == 'linux'"]
+override-dependencies = [
+    "torch>=2.11.0",
+    "torchvision>=0.26.0",
+    "pillow>=11.0.0",
 ]
 
 [tool.uv.sources]
